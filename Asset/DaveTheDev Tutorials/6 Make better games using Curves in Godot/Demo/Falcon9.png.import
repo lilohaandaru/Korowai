@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://nen13gii08kn"
+path="res://.godot/imported/Falcon9.png-7d106b198982e9c8dc66bef49af6386b.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Asset/DaveTheDev Tutorials/6 Make better games using Curves in Godot/Demo/Falcon9.png"
+dest_files=["res://.godot/imported/Falcon9.png-7d106b198982e9c8dc66bef49af6386b.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

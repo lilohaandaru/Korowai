@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bunkilnbp6x0v"
+path="res://.godot/imported/Sphere.obj-ba76f0f642096434d8ecca9ae3f6824b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Sphere.obj-ba76f0f642096434d8ecca9ae3f6824b.mesh"]
+
+source_file="res://Asset/DaveTheDev Tutorials/9 Using Perlin Noise/Tutorial/Sphere.obj"
+dest_files=["res://.godot/imported/Sphere.obj-ba76f0f642096434d8ecca9ae3f6824b.mesh", "res://.godot/imported/Sphere.obj-ba76f0f642096434d8ecca9ae3f6824b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

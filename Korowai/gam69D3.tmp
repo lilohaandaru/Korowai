@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://7wutgner2bmh"]
+
+[ext_resource type="PackedScene" uid="uid://cr5x26kdxcxo7" path="res://player.tscn" id="1_gc3cl"]
+[ext_resource type="Script" path="res://Korowai/game_level.gd" id="1_nqmej"]
+
+[node name="GameLevel" type="Node2D"]
+scale = Vector2(1.00603, 1)
+script = ExtResource("1_nqmej")
+
+[node name="Player" parent="." instance=ExtResource("1_gc3cl")]

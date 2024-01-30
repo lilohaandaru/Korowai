@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://we1lmu28mhx0"
+path="res://.godot/imported/Sphere.obj-34411b5bd0b6d920e24450bfb85bea11.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Sphere.obj-34411b5bd0b6d920e24450bfb85bea11.mesh"]
+
+source_file="res://Asset/DaveTheDev Tutorials/8 Clicking 3D Objects/Sphere.obj"
+dest_files=["res://.godot/imported/Sphere.obj-34411b5bd0b6d920e24450bfb85bea11.mesh", "res://.godot/imported/Sphere.obj-34411b5bd0b6d920e24450bfb85bea11.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

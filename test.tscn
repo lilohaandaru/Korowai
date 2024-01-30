@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqgmho5eqa3ca"]
+
+[ext_resource type="Script" path="res://Test.gd" id="1_64syu"]
+[ext_resource type="PackedScene" uid="uid://dgn21dhcj1dr4" path="res://Characters/player_cat.tscn" id="2_3sasm"]
+[ext_resource type="PackedScene" uid="uid://csa3bsjrslye0" path="res://Korowai/Interaction/InteractionArea/interaction_area.tscn" id="3_r7cjj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nide6"]
+size = Vector2(82, 72)
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_64syu")
+
+[node name="PlayerCat" parent="." groups=["player"] instance=ExtResource("2_3sasm")]
+position = Vector2(104, 72)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerCat"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_r7cjj")]
+collision_layer = 1
+action_name = "toggle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(104, 72)
+shape = SubResource("RectangleShape2D_nide6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(104, 72)

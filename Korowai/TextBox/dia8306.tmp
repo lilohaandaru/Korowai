@@ -1,0 +1,187 @@
+[gd_scene load_steps=9 format=3 uid="uid://df41i37s1lwk0"]
+
+[ext_resource type="Script" path="res://Korowai/TextBox/dialog_player.gd" id="1_o5fdp"]
+[ext_resource type="Texture2D" uid="uid://clo4mrlvepjgq" path="res://Asset/DaveTheDev Tutorials/12 Dialog Player/textures/menu_section_9patch.png" id="1_p2jfr"]
+
+[sub_resource type="Animation" id="Animation_jrfhg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_n7mkn"]
+resource_name = "TextDisplay"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s3bsn"]
+_data = {
+"RESET": SubResource("Animation_jrfhg"),
+"TextDisplay": SubResource("Animation_n7mkn")
+}
+
+[sub_resource type="Animation" id="Animation_ah1nh"]
+resource_name = "PressSpacebar"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.02, 1.02), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ovgxa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xei3b"]
+_data = {
+"PressSpacebar": SubResource("Animation_ah1nh"),
+"RESET": SubResource("Animation_ovgxa")
+}
+
+[node name="DialogPlayer" type="Node"]
+script = ExtResource("1_o5fdp")
+
+[node name="DialogBox" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 320.0
+offset_top = 328.0
+offset_right = 360.0
+offset_bottom = 368.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="DialogBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -88.0
+offset_right = 262.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_p2jfr")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogBox/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = -18.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BodyLabel" type="Label" parent="DialogBox/NinePatchRect/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "This is where the body of the dialog text. Press F6 to play! ^_^"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="TextDisplay" type="AnimationPlayer" parent="DialogBox/NinePatchRect/MarginContainer/BodyLabel"]
+libraries = {
+"": SubResource("AnimationLibrary_s3bsn")
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="DialogBox/NinePatchRect"]
+layout_mode = 0
+offset_left = -30.0
+offset_top = -20.0
+offset_right = 108.0
+offset_bottom = 16.0
+texture = ExtResource("1_p2jfr")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="SpeakerLabel" type="Label" parent="DialogBox/NinePatchRect/NinePatchRect"]
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 36.0
+text = "Speaker"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="DialogBox/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -186.0
+offset_top = -20.0
+offset_right = 30.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("1_p2jfr")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="SpacebarLabel" type="Label" parent="DialogBox/NinePatchRect/NinePatchRect2"]
+layout_mode = 0
+offset_right = 216.0
+offset_bottom = 32.0
+text = "Press Spacebar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpacebarDisplay" type="AnimationPlayer" parent="DialogBox/NinePatchRect/NinePatchRect2/SpacebarLabel"]
+libraries = {
+"": SubResource("AnimationLibrary_xei3b")
+}
+
+[connection signal="animation_finished" from="DialogBox/NinePatchRect/MarginContainer/BodyLabel/TextDisplay" to="." method="_on_text_display_animation_finished"]

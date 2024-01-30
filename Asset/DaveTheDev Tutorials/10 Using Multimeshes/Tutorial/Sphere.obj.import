@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://15t8vkit1017"
+path="res://.godot/imported/Sphere.obj-3de99194048dd6c6f4119588c0d111ab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Sphere.obj-3de99194048dd6c6f4119588c0d111ab.mesh"]
+
+source_file="res://Asset/DaveTheDev Tutorials/10 Using Multimeshes/Tutorial/Sphere.obj"
+dest_files=["res://.godot/imported/Sphere.obj-3de99194048dd6c6f4119588c0d111ab.mesh", "res://.godot/imported/Sphere.obj-3de99194048dd6c6f4119588c0d111ab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
